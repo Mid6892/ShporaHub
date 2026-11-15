@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы программирования — ШпораHub</title>
+    <link rel="stylesheet" href="Css-project-1.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="index.html" class="logo">🎓 Шпора<span>Hub</span></a>
+        <nav>
+            <ul>
+                <li><a href="mathanaliz.html"        class="menu-link">∫ Матанализ</a></li>
+                <li><a href="algebra.html"     class="menu-link">∑ Алгебра</a></li>
+                <li><a href="phisics.html"     class="menu-link">⚛ Физика</a></li>
+                <li><a href="html.html"        class="menu-link">🌐 Основы HTML</a></li>
+                <li><a href="programming.html" class="menu-link">💻 Программирование</a></li>
+                <li><a href="graphika.html"    class="menu-link">📐 Графика</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Поиск формулы..." autocomplete="off">
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <div class="slider-placeholder">
+        <div class="slider-icon">🖼️</div>
+        <div class="slider-text">Место под слайдер</div>
+        <div class="slider-hint">Здесь будет слайдер с картинками</div>
+    </div>
+
+    <nav class="breadcrumbs">
+        <a href="index.html">Главная</a>
+        <span>/</span>
+        <span>Основы программирования</span>
+    </nav>
+
+    <div class="section-hero">
+        <div class="card-icon icon-prog">💻</div>
+        <div>
+            <h1>Основы программирования</h1>
+            <p>C/C++, ассемблер, алгоритмы и структуры данных.</p>
+        </div>
+    </div>
+
+    <div class="section-layout">
+
+        <aside class="section-sidebar">
+            <h3>Содержание</h3>
+            <ul>
+                <li><a href="#c">Язык C / C++</a></li>
+                <li><a href="#asm">Ассемблер x86</a></li>
+                <li><a href="#algo">Алгоритмы и блок-схемы</a></li>
+                <li><a href="#data-struct">Структуры данных</a></li>
+            </ul>
+        </aside>
+
+        <div class="section-content">
+
+            <section class="topic" id="c">
+                <h2>Язык C / C++</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Цикл for</div>
+                        <div class="formula-code">for (int i = 0; i &lt; n; i++) { … }</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Условие</div>
+                        <div class="formula-code">if (x &gt; 0) { … } else { … }</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Указатель</div>
+                        <div class="formula-code">int *p = &amp;x;</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Массив</div>
+                        <div class="formula-code">int a[10];</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="asm">
+                <h2>Ассемблер x86</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Регистры общего назначения</div>
+                        <div class="formula-code">EAX, EBX, ECX, EDX, ESP, EBP, ESI, EDI</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Стек</div>
+                        <div class="formula-code">push eax  /  pop eax</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Сложение и вычитание</div>
+                        <div class="formula-code">add eax, ebx  /  sub eax, ebx</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Переход</div>
+                        <div class="formula-code">jmp label  /  je label  /  jne label</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="algo">
+                <h2>Алгоритмы и блок-схемы</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Начало / конец</div>
+                        <div class="formula-code">Овал</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Действие</div>
+                        <div class="formula-code">Прямоугольник</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Условие</div>
+                        <div class="formula-code">Ромб</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Ввод / вывод</div>
+                        <div class="formula-code">Параллелограмм</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="data-struct">
+                <h2>Структуры данных</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Стек</div>
+                        <div class="formula-code">LIFO — последним пришёл, первым вышел</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Очередь</div>
+                        <div class="formula-code">FIFO — первым пришёл, первым вышел</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Связный список</div>
+                        <div class="formula-code">struct Node { int data; Node *next; };</div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 ШпораHub — База шпаргалок по техническим дисциплинам.
+</footer>
+
+<script src="JS/search-index.js"></script>
+<script src="JS/search.js"></script>
+</body>
+</html>

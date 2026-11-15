@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Математический анализ — ШпораHub</title>
+    <link rel="stylesheet" href="Css-project-1.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="index.html" class="logo">🎓 Шпора<span>Hub</span></a>
+        <nav>
+            <ul>
+                <li><a href="mathanaliz.html"  class="menu-link">∫ Матанализ</a></li>
+                <li><a href="algebra.html"     class="menu-link">∑ Алгебра</a></li>
+                <li><a href="phisics.html"     class="menu-link">⚛ Физика</a></li>
+                <li><a href="html.html"        class="menu-link">🌐 Основы HTML</a></li>
+                <li><a href="programming.html" class="menu-link">💻 Программирование</a></li>
+                <li><a href="graphika.html"    class="menu-link">📐 Графика</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Поиск формулы..." autocomplete="off">
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <!-- Место под слайдер -->
+    <div class="slider-placeholder">
+        <div class="slider-icon">🖼️</div>
+        <div class="slider-text">Место под слайдер</div>
+        <div class="slider-hint">Здесь будет слайдер с картинками</div>
+    </div>
+
+    <nav class="breadcrumbs">
+        <a href="index.html">Главная</a>
+        <span>/</span>
+        <span>Математический анализ</span>
+    </nav>
+
+    <div class="section-hero">
+        <div class="card-icon icon-math">∫</div>
+        <div>
+            <h1>Математический анализ</h1>
+            <p>Пределы, производные, интегралы, ряды и функции нескольких переменных.</p>
+        </div>
+    </div>
+
+    <div class="section-layout">
+
+        <aside class="section-sidebar">
+            <h3>Содержание</h3>
+            <ul>
+                <li><a href="#limits">Пределы и непрерывность</a></li>
+                <li><a href="#derivatives">Производные и дифференциалы</a></li>
+                <li><a href="#integrals">Интегралы</a></li>
+                <li><a href="#series">Ряды</a></li>
+                <li><a href="#multivariable">Функции нескольких переменных</a></li>
+            </ul>
+        </aside>
+
+        <div class="section-content">
+
+            <section class="topic" id="limits">
+                <h2>Пределы и непрерывность</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Первый замечательный предел</div>
+                        <div class="formula-code">lim(x→0) sin(x)/x = 1</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Второй замечательный предел</div>
+                        <div class="formula-code">lim(x→∞) (1 + 1/x)^x = e</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Эквивалентности при x→0</div>
+                        <div class="formula-code">sin x ~ x,  tg x ~ x,  ln(1+x) ~ x,  e^x−1 ~ x</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="derivatives">
+                <h2>Производные и дифференциалы</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Производная степенной</div>
+                        <div class="formula-code">(x^n)' = n·x^(n−1)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Производная произведения</div>
+                        <div class="formula-code">(u·v)' = u'·v + u·v'</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Производная сложной функции</div>
+                        <div class="formula-code">[f(g(x))]' = f'(g(x))·g'(x)</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="integrals">
+                <h2>Интегралы</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Табличный интеграл</div>
+                        <div class="formula-code">∫ x^n dx = x^(n+1)/(n+1) + C</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Формула Ньютона–Лейбница</div>
+                        <div class="formula-code">∫[a..b] f(x) dx = F(b) − F(a)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Интегрирование по частям</div>
+                        <div class="formula-code">∫ u dv = u·v − ∫ v du</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="series">
+                <h2>Ряды</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Ряд Тейлора</div>
+                        <div class="formula-code">f(x) = Σ f⁽ⁿ⁾(a)/n! · (x−a)ⁿ</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Ряд Маклорена для e^x</div>
+                        <div class="formula-code">e^x = Σ xⁿ/n! = 1 + x + x²/2! + …</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="multivariable">
+                <h2>Функции нескольких переменных</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Частная производная</div>
+                        <div class="formula-code">∂f/∂x = lim(Δx→0) [f(x+Δx, y) − f(x,y)] / Δx</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Полный дифференциал</div>
+                        <div class="formula-code">df = (∂f/∂x)dx + (∂f/∂y)dy</div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 ШпораHub — База шпаргалок по техническим дисциплинам.
+</footer>
+
+<script src="JS/search-index.js"></script>
+<script src="JS/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы HTML и CSS — ШпораHub</title>
+    <link rel="stylesheet" href="Css-project-1.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="index.html" class="logo">🎓 Шпора<span>Hub</span></a>
+        <nav>
+            <ul>
+                <li><a href="mathanaliz.html"        class="menu-link">∫ Матанализ</a></li>
+                <li><a href="algebra.html"     class="menu-link">∑ Алгебра</a></li>
+                <li><a href="phisics.html"     class="menu-link">⚛ Физика</a></li>
+                <li><a href="html.html"        class="menu-link">🌐 Основы HTML</a></li>
+                <li><a href="programming.html" class="menu-link">💻 Программирование</a></li>
+                <li><a href="graphika.html"    class="menu-link">📐 Графика</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Поиск формулы..." autocomplete="off">
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <div class="slider-placeholder">
+        <div class="slider-icon">🖼️</div>
+        <div class="slider-text">Место под слайдер</div>
+        <div class="slider-hint">Здесь будет слайдер с картинками</div>
+    </div>
+
+    <nav class="breadcrumbs">
+        <a href="index.html">Главная</a>
+        <span>/</span>
+        <span>Основы HTML и CSS</span>
+    </nav>
+
+    <div class="section-hero">
+        <div class="card-icon icon-html">&lt;&gt;</div>
+        <div>
+            <h1>Основы HTML и CSS</h1>
+            <p>Разметка, формы, таблицы, карты изображений и CSS.</p>
+        </div>
+    </div>
+
+    <div class="section-layout">
+
+        <aside class="section-sidebar">
+            <h3>Содержание</h3>
+            <ul>
+                <li><a href="#structure">Структура документа и теги</a></li>
+                <li><a href="#forms">Формы и атрибуты</a></li>
+                <li><a href="#tables">Таблицы и списки</a></li>
+                <li><a href="#maps">Карты изображений</a></li>
+                <li><a href="#css">Встраивание и вложение CSS</a></li>
+            </ul>
+        </aside>
+
+        <div class="section-content">
+
+            <section class="topic" id="structure">
+                <h2>Структура документа и теги</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Скелет страницы</div>
+                        <div class="formula-code">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;…&lt;/head&gt;
+  &lt;body&gt;…&lt;/body&gt;
+&lt;/html&gt;</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Заголовки</div>
+                        <div class="formula-code">&lt;h1&gt;…&lt;/h1&gt; … &lt;h6&gt;…&lt;/h6&gt;</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Абзац и перенос</div>
+                        <div class="formula-code">&lt;p&gt;…&lt;/p&gt;  &lt;br&gt;</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="forms">
+                <h2>Формы и атрибуты</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Поле ввода</div>
+                        <div class="formula-code">&lt;input type="text" name="q"&gt;</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Кнопка отправки</div>
+                        <div class="formula-code">&lt;button type="submit"&gt;Отправить&lt;/button&gt;</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Обязательное поле</div>
+                        <div class="formula-code">&lt;input type="email" required&gt;</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="tables">
+                <h2>Таблицы и списки</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Таблица</div>
+                        <div class="formula-code">&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;…&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Маркированный список</div>
+                        <div class="formula-code">&lt;ul&gt;&lt;li&gt;…&lt;/li&gt;&lt;/ul&gt;</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Нумерованный список</div>
+                        <div class="formula-code">&lt;ol&gt;&lt;li&gt;…&lt;/li&gt;&lt;/ol&gt;</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="maps">
+                <h2>Карты изображений</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Карта и область</div>
+                        <div class="formula-code">&lt;map name="m"&gt;
+  &lt;area shape="rect" coords="0,0,100,100" href="…"&gt;
+&lt;/map&gt;</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Привязка карты к картинке</div>
+                        <div class="formula-code">&lt;img src="…" usemap="#m"&gt;</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="css">
+                <h2>Встраивание и вложение CSS</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Внешний файл</div>
+                        <div class="formula-code">&lt;link rel="stylesheet" href="styles.css"&gt;</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Внутренний блок</div>
+                        <div class="formula-code">&lt;style&gt; … &lt;/style&gt;</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Атрибут style</div>
+                        <div class="formula-code">&lt;p style="color: red;"&gt;…&lt;/p&gt;</div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 ШпораHub — База шпаргалок по техническим дисциплинам.
+</footer>
+
+<script src="JS/search-index.js"></script>
+<script src="JS/search.js"></script>
+</body>
+</html>

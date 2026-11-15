@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ШпораHub — База шпаргалок для студентов</title>
+    <link rel="stylesheet" href="Css-project-1.css">
+</head>
+<body>
+
+    <!-- ВЕРХНЕЕ НАВИГАЦИОННОЕ МЕНЮ -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                🎓 Шпора<span>Hub</span>
+            </a>
+
+            <nav>
+                <ul>
+                <li><a href="mathanaliz.html"        class="menu-link">∫ Матанализ</a></li>
+                <li><a href="algebra.html"     class="menu-link">∑ Алгебра</a></li>
+                <li><a href="phisics.html"     class="menu-link">⚛ Физика</a></li>
+                <li><a href="html.html"        class="menu-link">🌐 Основы HTML</a></li>
+                <li><a href="programming.html" class="menu-link">💻 Программирование</a></li>
+                <li><a href="graphika.html"    class="menu-link">📐 Графика</a></li>
+                </ul>
+            </nav>
+
+            <div class="search-box">
+                <input type="text" placeholder="Поиск формулы..." autocomplete="off">
+                <div id="search-results" class="search-results"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <main>
+        <section class="hero">
+            <h1>База шпаргалок и формул для студентов</h1>
+            <p>Выберите нужную дисциплину, чтобы открыть формулы, теоремы и готовые решения задач</p>
+        </section>
+
+        <section class="grid-categories">
+
+            <!-- Карточка 1: Матанализ -->
+            <div class="card" id="math">
+                <div>
+                    <div class="card-header">
+                        <div class="card-icon icon-math">∫</div>
+                        <div class="card-title">Математический анализ</div>
+                    </div>
+                    <ul class="card-list">
+                        <li><a href="mathanaliz.html#limits">Пределы и непрерывность</a></li>
+                        <li><a href="mathanaliz.html#derivatives">Производные и дифференциалы</a></li>
+                        <li><a href="mathanaliz.html#integrals">Интегралы</a></li>
+                        <li><a href="mathanaliz.html#series">Ряды</a></li>
+                        <li><a href="mathanaliz.html#multivariable">Функции нескольких переменных</a></li>
+                    </ul>
+                </div>
+                <a href="mathanaliz.html" class="card-btn">Открыть раздел матанализа</a>
+            </div>
+
+            <!-- Карточка 2: Алгебра -->
+            <div class="card" id="algebra">
+                <div>
+                    <div class="card-header">
+                        <div class="card-icon icon-algebra">∑</div>
+                        <div class="card-title">Алгебра и геометрия</div>
+                    </div>
+                    <ul class="card-list">
+                        <li><a href="algebra.html#matrices">Матрицы и определители</a></li>
+                        <li><a href="algebra.html#slau">СЛАУ</a></li>
+                        <li><a href="algebra.html#vectors">Векторная алгебра</a></li>
+                        <li><a href="algebra.html#geom">Аналитическая геометрия</a></li>
+                        <li><a href="algebra.html#spaces">Линейные пространства</a></li>
+                    </ul>
+                </div>
+                <a href="algebra.html" class="card-btn">Открыть раздел алгебры</a>
+            </div>
+
+            <!-- Карточка 3: Физика -->
+            <div class="card" id="physics">
+                <div>
+                    <div class="card-header">
+                        <div class="card-icon icon-physics">⚛</div>
+                        <div class="card-title">Общая физика</div>
+                    </div>
+                    <ul class="card-list">
+                        <li><a href="phisics.html#mechanics">Механика и кинематика</a></li>
+                        <li><a href="phisics.html#thermo">Молекулярная физика и термодинамика</a></li>
+                        <li><a href="phisics.html#electro">Электростатика и постоянный ток</a></li>
+                        <li><a href="phisics.html#magnetism">Магнетизм и электромагнетизм</a></li>
+                        <li><a href="phisics.html#optics">Волновая и геометрическая оптика</a></li>
+                    </ul>
+                </div>
+                <a href="phisics.html" class="card-btn">Открыть раздел физики</a>
+            </div>
+
+            <!-- Карточка 4: Основы HTML -->
+            <div class="card" id="html">
+                <div>
+                    <div class="card-header">
+                        <div class="card-icon icon-html">&lt;&gt;</div>
+                        <div class="card-title">Основы HTML и CSS</div>
+                    </div>
+                    <ul class="card-list">
+                        <li><a href="html.html#structure">Структура документа и теги</a></li>
+                        <li><a href="html.html#forms">Формы и атрибуты</a></li>
+                        <li><a href="html.html#tables">Таблицы и списки</a></li>
+                        <li><a href="html.html#maps">Карты изображений</a></li>
+                        <li><a href="html.html#css">Встраивание и вложение CSS</a></li>
+                    </ul>
+                </div>
+                <a href="html.html" class="card-btn">Открыть раздел HTML</a>
+            </div>
+
+            <!-- Карточка 5: Программирование -->
+            <div class="card" id="programming">
+                <div>
+                    <div class="card-header">
+                        <div class="card-icon icon-prog">💻</div>
+                        <div class="card-title">Основы программирования</div>
+                    </div>
+                    <ul class="card-list">
+                        <li><a href="programming.html#c">Язык C / C++</a></li>
+                        <li><a href="programming.html#asm">Ассемблер x86</a></li>
+                        <li><a href="programming.html#algo">Алгоритмы и блок-схемы</a></li>
+                        <li><a href="programming.html#data-struct">Структуры данных</a></li>
+                    </ul>
+                </div>
+                <a href="programming.html" class="card-btn">Открыть раздел программирования</a>
+            </div>
+
+            <!-- Карточка 6: Компьютерная графика -->
+            <div class="card" id="graphics">
+                <div>
+                    <div class="card-header">
+                        <div class="card-icon icon-graph">📐</div>
+                        <div class="card-title">Компьютерная графика</div>
+                    </div>
+                    <ul class="card-list">
+                        <li><a href="graphika.html#homogeneous">Однородные координаты</a></li>
+                        <li><a href="graphika.html#transforms">Матрицы преобразований</a></li>
+                        <li><a href="graphika.html#scilab">3D моделирование в Scilab</a></li>
+                        <li><a href="graphika.html#pipeline">Графический конвейер</a></li>
+                    </ul>
+                </div>
+                <a href="graphika.html" class="card-btn">Открыть раздел графики</a>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- ПОДВАЛ СТИЛЬНОГО САЙТА -->
+    <footer>
+        &copy; 2026 ШпораHub — База шпаргалок по техническим дисциплинам.
+    </footer>
+<script src="JS/search-index.js"></script>
+<script src="JS/search.js"></script>
+</body>
+</html>

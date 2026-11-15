@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Общая физика — ШпораHub</title>
+    <link rel="stylesheet" href="Css-project-1.css"></head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="index.html" class="logo">🎓 Шпора<span>Hub</span></a>
+        <nav>
+            <ul>
+                <li><a href="mathanaliz.html"        class="menu-link">∫ Матанализ</a></li>
+                <li><a href="algebra.html"     class="menu-link">∑ Алгебра</a></li>
+                <li><a href="phisics.html"     class="menu-link">⚛ Физика</a></li>
+                <li><a href="html.html"        class="menu-link">🌐 Основы HTML</a></li>
+                <li><a href="programming.html" class="menu-link">💻 Программирование</a></li>
+                <li><a href="graphika.html"    class="menu-link">📐 Графика</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Поиск формулы..." autocomplete="off">
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <div class="slider-placeholder">
+        <div class="slider-icon">🖼️</div>
+        <div class="slider-text">Место под слайдер</div>
+        <div class="slider-hint">Здесь будет слайдер с картинками</div>
+    </div>
+
+    <nav class="breadcrumbs">
+        <a href="index.html">Главная</a>
+        <span>/</span>
+        <span>Общая физика</span>
+    </nav>
+
+    <div class="section-hero">
+        <div class="card-icon icon-physics">⚛</div>
+        <div>
+            <h1>Общая физика</h1>
+            <p>Механика, термодинамика, электромагнетизм и оптика.</p>
+        </div>
+    </div>
+
+    <div class="section-layout">
+
+        <aside class="section-sidebar">
+            <h3>Содержание</h3>
+            <ul>
+                <li><a href="#mechanics">Механика и кинематика</a></li>
+                <li><a href="#thermo">Молекулярная физика и термодинамика</a></li>
+                <li><a href="#electro">Электростатика и постоянный ток</a></li>
+                <li><a href="#magnetism">Магнетизм и электромагнетизм</a></li>
+                <li><a href="#optics">Волновая и геометрическая оптика</a></li>
+            </ul>
+        </aside>
+
+        <div class="section-content">
+
+            <section class="topic" id="mechanics">
+                <h2>Механика и кинематика</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Второй закон Ньютона</div>
+                        <div class="formula-code">F = m·a</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Кинетическая энергия</div>
+                        <div class="formula-code">E_k = m·v² / 2</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Потенциальная энергия</div>
+                        <div class="formula-code">E_p = m·g·h</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Уравнение движения</div>
+                        <div class="formula-code">x = x₀ + v₀·t + a·t² / 2</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="thermo">
+                <h2>Молекулярная физика и термодинамика</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Уравнение Менделеева–Клапейрона</div>
+                        <div class="formula-code">pV = (m/M)·R·T</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Первый закон термодинамики</div>
+                        <div class="formula-code">Q = ΔU + A</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">КПД тепловой машины</div>
+                        <div class="formula-code">η = (Q₁ − Q₂) / Q₁</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="electro">
+                <h2>Электростатика и постоянный ток</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Закон Ома</div>
+                        <div class="formula-code">I = U / R</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Закон Джоуля–Ленца</div>
+                        <div class="formula-code">Q = I²·R·t</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Закон Кулона</div>
+                        <div class="formula-code">F = k·|q₁·q₂| / r²</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Правила Кирхгофа</div>
+                        <div class="formula-code">ΣI = 0 (узел);  ΣIR = ΣE (контур)</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="magnetism">
+                <h2>Магнетизм и электромагнетизм</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Сила Ампера</div>
+                        <div class="formula-code">F = B·I·L·sin α</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Закон Фарадея</div>
+                        <div class="formula-code">ε = −dΦ/dt</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Закон Био–Савара–Лапласа</div>
+                        <div class="formula-code">dB = (μ₀·I / 4π) · (dl × r) / r³</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="optics">
+                <h2>Волновая и геометрическая оптика</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Закон преломления</div>
+                        <div class="formula-code">sin α / sin β = n₂ / n₁</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Тонкая линза</div>
+                        <div class="formula-code">1/f = 1/d + 1/d'</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Условие дифракционного максимума</div>
+                        <div class="formula-code">d·sin φ = k·λ</div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 ШпораHub — База шпаргалок по техническим дисциплинам.
+</footer>
+
+<script src="JS/search-index.js"></script>
+<script src="JS/search.js"></script>
+</body>
+</html>
