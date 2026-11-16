@@ -3,14 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Математический анализ — ШпораHub</title>
     <link rel="stylesheet" href="Css-project-1.css">
+
     <script>
     window.MathJax = {
         tex: { inlineMath: [['\\(', '\\)']] }
     };
     </script>
+
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="icon" type="png" href="images/favicon-16x16.png">
+
+    <script type="text/javascript" src="JS\jquery.js"></script>
+    <script type="text/javascript" src="JS\jquery.cross-slide.js"></script>
+    <script type="text/javascript">
+    $(function() {
+    $('#test1').crossSlide({ sleep: 2,
+    fade: 1
+    }, [
+    { src: 'images/photo_2023-01-12_01-03-06.jpg' },
+    { src: 'images/photo_2024-09-23_21-27-41.jpg' },
+    { src: 'images/photo_2024-10-02_07-40-20.jpg' },
+    { src: 'images/screen1.png' }
+    ]);
+    });
+    </script>
 </head>
 <body>
 
@@ -37,10 +57,13 @@
 <main>
 
     <!-- Место под слайдер -->
-    <div class="slider-placeholder">
-        <div class="slider-icon">🖼️</div>
-        <div class="slider-text">Место под слайдер</div>
-        <div class="slider-hint">Здесь будет слайдер с картинками</div>
+    <div class="slider-wrapper">
+
+        <div id="test1" class="my-slider"></div>
+
+        <a href="https://ughdhdh.github.io/Website-afans/" target="_blank" class="slider-main-link" aria-label="Перейти на сайт"></a>
+
+        <a href="images/photo_2026-01-11_16-08-14.jpg" target="_blank" class="slider-corner-btn"></a>
     </div>
 
     <nav class="breadcrumbs">

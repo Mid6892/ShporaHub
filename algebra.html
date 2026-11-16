@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алгебра и геометрия — ШпораHub</title>
+    <link rel="stylesheet" href="Css-project-1.css">
+    <script>
+    window.MathJax = {
+        tex: { inlineMath: [['\\(', '\\)']] }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="icon" type="png" href="images/favicon-16x16.png">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="index.html" class="logo">🎓 Шпора<span>Hub</span></a>
+        <nav>
+            <ul>
+                <li><a href="mathanaliz.html"  class="menu-link">∫ Матанализ</a></li>
+                <li><a href="algebra.html"     class="menu-link">∑ Алгебра</a></li>
+                <li><a href="phisics.html"     class="menu-link">⚛ Физика</a></li>
+                <li><a href="html.html"        class="menu-link">🌐 Основы HTML</a></li>
+                <li><a href="programming.html" class="menu-link">💻 Программирование</a></li>
+                <li><a href="graphika.html"    class="menu-link">📐 Графика</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Поиск..." autocomplete="off">
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <nav class="breadcrumbs">
+        <a href="index.html">Главная</a>
+        <span>/</span>
+        <span>Алгебра и геометрия</span>
+    </nav>
+
+    <div class="section-hero">
+        <div class="card-icon icon-algebra">∑</div>
+        <div>
+            <h1>Алгебра и геометрия</h1>
+            <p>Матрицы, СЛАУ, векторы, аналитическая геометрия и линейные пространства.</p>
+        </div>
+    </div>
+
+    <div class="section-layout">
+
+        <aside class="section-sidebar">
+            <h3>Содержание</h3>
+            <ul>
+                <li><a href="#matrices">Матрицы и определители</a></li>
+                <li><a href="#slau">СЛАУ</a></li>
+                <li><a href="#vectors">Векторная алгебра</a></li>
+                <li><a href="#geom">Аналитическая геометрия</a></li>
+                <li><a href="#spaces">Линейные пространства</a></li>
+            </ul>
+        </aside>
+
+        <div class="section-content">
+
+            <section class="topic" id="matrices">
+                <h2>Матрицы и определители</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Определитель 2×2</div>
+                        <div class="formula-code">\(\begin{vmatrix} a & b \\ c & d \end{vmatrix} = ad - bc\)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Обратная матрица</div>
+                        <div class="formula-code">\(A^{-1} = \frac{1}{\det A} \cdot \text{adj}(A)\)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Определитель 3×3 (правило Саррюса)</div>
+                        <div class="formula-code-long">\(\det A = a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} - a_{13}a_{22}a_{31} - a_{11}a_{23}a_{32} - a_{12}a_{21}a_{33}\)</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="slau">
+                <h2>Системы линейных уравнений (СЛАУ)</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Метод Крамера</div>
+                        <div class="formula-code">\(x_i = \frac{\Delta_i}{\Delta}\)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Метод Гаусса</div>
+                        <div class="formula-code">Приведение расширенной матрицы к ступенчатому виду</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Матричный способ</div>
+                        <div class="formula-code">\(X = A^{-1} \cdot B\)</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="vectors">
+                <h2>Векторная алгебра</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Скалярное произведение</div>
+                        <div class="formula-code-long">\(\vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos \varphi\) - работа силы по перемещению</div> 
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Векторное произведение</div>
+                        <div class="formula-code-long">\(|\vec{a} \times \vec{b}| = |\vec{a}||\vec{b}|\sin \varphi\) - площадь параллелограмма</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Смешанное произведение</div>
+                        <div class="formula-code-long">\((\vec{a}, \vec{b}, \vec{c}) = \vec{a} \cdot (\vec{b} \times \vec{c})\) - объём параллелепипеда</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="geom">
+                <h2>Аналитическая геометрия</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Уравнение прямой</div>
+                        <div class="formula-code">\(Ax + By + C = 0\)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Уравнение плоскости</div>
+                        <div class="formula-code">\(Ax + By + Cz + D = 0\)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Расстояние от точки до плоскости</div>
+                        <div class="formula-code">\(d = \frac{|Ax_0 + By_0 + Cz_0 + D|}{\sqrt{A^2 + B^2 + C^2}}\)</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="spaces">
+                <h2>Линейные пространства</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Базис</div>
+                        <div class="formula-code">Любая максимальная линейно независимая система</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Ранг матрицы</div>
+                        <div class="formula-code">Максимальное число линейно независимых строк/столбцов</div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 ШпораHub — База шпаргалок по техническим дисциплинам.
+</footer>
+
+<script src="JS/search-index.js"></script>
+<script src="JS/search.js"></script>
+</body>
+</html>

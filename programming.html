@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Основы программирования — ШпораHub</title>
     <link rel="stylesheet" href="Css-project-1.css">
+    <link rel="icon" type="png" href="images/favicon-16x16.png">
 </head>
 <body>
 
@@ -13,7 +14,7 @@
         <a href="index.html" class="logo">🎓 Шпора<span>Hub</span></a>
         <nav>
             <ul>
-                <li><a href="mathanaliz.html"        class="menu-link">∫ Матанализ</a></li>
+                <li><a href="mathanaliz.html"  class="menu-link">∫ Матанализ</a></li>
                 <li><a href="algebra.html"     class="menu-link">∑ Алгебра</a></li>
                 <li><a href="phisics.html"     class="menu-link">⚛ Физика</a></li>
                 <li><a href="html.html"        class="menu-link">🌐 Основы HTML</a></li>
@@ -29,12 +30,6 @@
 </header>
 
 <main>
-
-    <div class="slider-placeholder">
-        <div class="slider-icon">🖼️</div>
-        <div class="slider-text">Место под слайдер</div>
-        <div class="slider-hint">Здесь будет слайдер с картинками</div>
-    </div>
 
     <nav class="breadcrumbs">
         <a href="index.html">Главная</a>
@@ -88,46 +83,222 @@
 
             <section class="topic" id="asm">
                 <h2>Ассемблер x86</h2>
-                <div class="formula-list">
-                    <div class="formula-card">
-                        <div class="formula-name">Регистры общего назначения</div>
-                        <div class="formula-code">EAX, EBX, ECX, EDX, ESP, EBP, ESI, EDI</div>
-                    </div>
-                    <div class="formula-card">
-                        <div class="formula-name">Стек</div>
-                        <div class="formula-code">push eax  /  pop eax</div>
-                    </div>
-                    <div class="formula-card">
-                        <div class="formula-name">Сложение и вычитание</div>
-                        <div class="formula-code">add eax, ebx  /  sub eax, ebx</div>
-                    </div>
-                    <div class="formula-card">
-                        <div class="formula-name">Переход</div>
-                        <div class="formula-code">jmp label  /  je label  /  jne label</div>
-                    </div>
-                </div>
-            </section>
 
-            <section class="topic" id="algo">
-                <h2>Алгоритмы и блок-схемы</h2>
-                <div class="formula-list">
-                    <div class="formula-card">
-                        <div class="formula-name">Начало / конец</div>
-                        <div class="formula-code">Овал</div>
+                <!-- Блок 1: Регистры -->
+                <details class="cheat-details">
+                    <summary>Регистры процессора</summary>
+                    <div class="details-content">
+                        <table class="cheat-table">
+                            <thead>
+                                <tr>
+                                    <th>Группа</th>
+                                    <th>Подгруппа</th>
+                                    <th>Регистр</th>
+                                    <th>Назначение</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="4" class="group-cell">Общего назначения</td>
+                                    <td class="sub-group-cell">Аккумулятор</td>
+                                    <td class="mono">EAX</td>
+                                    <td>Арифметика, возврат значений</td>
+                                </tr>
+                                <tr>
+                                    <td class="sub-group-cell">База</td>
+                                    <td class="mono">EBX</td>
+                                    <td>Указатель на данные</td>
+                                </tr>
+                                <tr>
+                                    <td class="sub-group-cell">Счётчик</td>
+                                    <td class="mono">ECX</td>
+                                    <td>Счётчик циклов</td>
+                                </tr>
+                                <tr>
+                                    <td class="sub-group-cell">Данные</td>
+                                    <td class="mono">EDX</td>
+                                    <td>Умножение/деление</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" class="group-cell">Указатели</td>
+                                    <td class="sub-group-cell">Стека</td>
+                                    <td class="mono">ESP</td>
+                                    <td>Вершина стека</td>
+                                </tr>
+                                <tr>
+                                    <td class="sub-group-cell">Базы</td>
+                                    <td class="mono">EBP</td>
+                                    <td>База фрейма стека</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" class="group-cell">Индексные</td>
+                                    <td class="sub-group-cell">Источника</td>
+                                    <td class="mono">ESI</td>
+                                    <td>Индекс источника</td>
+                                </tr>
+                                <tr>
+                                    <td class="sub-group-cell">Приёмника</td>
+                                    <td class="mono">EDI</td>
+                                    <td>Индекс приёмника</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="formula-card">
-                        <div class="formula-name">Действие</div>
-                        <div class="formula-code">Прямоугольник</div>
+                </details>
+
+                <!-- Блок 2: Команды -->
+                <details class="cheat-details">
+                    <summary>Основные команды</summary>
+                    <div class="details-content">
+                        <table class="cheat-table">
+                            <thead>
+                                <tr>
+                                    <th>Категория</th>
+                                    <th>Команда</th>
+                                    <th>Описание</th>
+                                    <th>Пример</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="2" class="group-cell">Пересылка</td>
+                                    <td class="mono">MOV</td>
+                                    <td>Копирует значение</td>
+                                    <td class="mono">mov eax, ebx</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">LEA</td>
+                                    <td>Загружает адрес</td>
+                                    <td class="mono">lea eax, [ebx+4]</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3" class="group-cell">Арифметика</td>
+                                    <td class="mono">ADD / SUB</td>
+                                    <td>Сложение / вычитание</td>
+                                    <td class="mono">add eax, 10</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">MUL / IMUL</td>
+                                    <td>Умножение</td>
+                                    <td class="mono">imul eax, ebx</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">INC / DEC</td>
+                                    <td>Инкремент / декремент</td>
+                                    <td class="mono">inc ecx</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" class="group-cell">Переходы</td>
+                                    <td class="mono">JMP</td>
+                                    <td>Безусловный переход</td>
+                                    <td class="mono">jmp loop_start</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">CMP</td>
+                                    <td>Сравнение</td>
+                                    <td class="mono">cmp eax, ebx</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="formula-card">
-                        <div class="formula-name">Условие</div>
-                        <div class="formula-code">Ромб</div>
+                </details>
+
+                <!-- Блок 3: Флаги -->
+                <details class="cheat-details">
+                    <summary>Флаги (EFLAGS)</summary>
+                    <div class="details-content">
+                        <table class="cheat-table">
+                            <thead>
+                                <tr>
+                                    <th>Флаг</th>
+                                    <th>Название</th>
+                                    <th>Когда равен 1</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="mono">ZF</td>
+                                    <td>Zero Flag</td>
+                                    <td>Результат равен нулю</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">CF</td>
+                                    <td>Carry Flag</td>
+                                    <td>Был перенос/заём</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">SF</td>
+                                    <td>Sign Flag</td>
+                                    <td>Отрицательный результат</td>
+                                </tr>
+                                <tr>
+                                    <td class="mono">OF</td>
+                                    <td>Overflow Flag</td>
+                                    <td>Знаковое переполнение</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="formula-card">
-                        <div class="formula-name">Ввод / вывод</div>
-                        <div class="formula-code">Параллелограмм</div>
+                </details>
+
+                <!-- Блок 4: Стек -->
+                <details class="cheat-details">
+                    <summary>Работа со стеком (наглядно)</summary>
+                    <div class="details-content">
+                        
+                        <!-- 1. Теория -->
+                        <div class="stack-theory">
+                            <h4>Как устроен стек (LIFO)</h4>
+                            <p>Стек растет <b>вниз</b> (от старших адресов к младшим). Регистр <code>ESP</code> (Stack Pointer) всегда указывает на вершину — то есть на последний добавленный элемент.</p>
+                        </div>
+
+                        <!-- 2. Визуальная схема -->
+                        <div class="stack-visual">
+                            <div class="stack-box">
+                                <div class="stack-label">Память (RAM)</div>
+                                
+                                <div class="stack-row">
+                                    <span class="addr">0x00FF...</span>
+                                    <div class="cell">...</div>
+                                </div>
+                                <div class="stack-row">
+                                    <span class="addr">0x0010FF...</span>
+                                    <div class="cell" id="cell-esp">?</div>
+                                    <span class="ptr-esp">← ESP</span>
+                                </div>
+                                <div class="stack-row">
+                                    <span class="addr">0x0010FF...</span>
+                                    <div class="cell" id="cell-ebp">...</div>
+                                    <span class="ptr-ebp">← EBP (база фрейма)</span>
+                                </div>
+                                <div class="stack-row">
+                                    <span class="addr">0x0010FF...</span>
+                                    <div class="cell">...</div>
+                                </div>
+                            </div>
+                            
+                            <div class="stack-controls">
+                                <button class="btn-push" onclick="doPush()">push eax</button>
+                                <button class="btn-pop" onclick="doPop()">pop eax</button>
+                                <button class="btn-reset" onclick="doReset()">Сброс</button>
+                            </div>
+                        </div>
+
+                        <!-- 3. Таблица изменения регистров -->
+                        <div class="stack-registers">
+                            <div>Значение EAX: <span id="val-eax">0x00000004</span></div>
+                            <div>Значение ESP: <span id="val-esp">0x0010FFF4</span></div>
+                        </div>
+
+                        <!-- 4. Пояснения -->
+                        <div class="code-terminal" style="margin-top: 20px;">
+                            <span style="color: #38bdf8; font-weight: bold;">push eax</span> &nbsp; <span style="color: #64748b;">; ESP = ESP - 4, затем [ESP] = EAX</span><br>
+                            <span style="color: #f43f5e; font-weight: bold;">pop eax</span> &nbsp;&nbsp;&nbsp; <span style="color: #64748b;">; EAX = [ESP], затем ESP = ESP + 4</span>
+                        </div>
+
                     </div>
-                </div>
+                </details>
+
             </section>
 
             <section class="topic" id="data-struct">
@@ -158,5 +329,50 @@
 
 <script src="JS/search-index.js"></script>
 <script src="JS/search.js"></script>
+<script>
+// Начальные значения
+let currentESP = 0x0010FFF4;
+let currentEAX = 0x00000004;
+let stackData = []; // Массив для эмуляции стека
+
+function updateUI() {
+    document.getElementById('val-eax').textContent = '0x' + currentEAX.toString(16).padStart(8, '0').toUpperCase();
+    document.getElementById('val-esp').textContent = '0x' + currentESP.toString(16).padStart(8, '0').toUpperCase();
+    
+    const cell = document.getElementById('cell-esp');
+    if (stackData.length > 0) {
+        cell.textContent = '0x' + stackData[stackData.length - 1].toString(16).padStart(8, '0').toUpperCase();
+        cell.style.color = '#38bdf8';
+        cell.style.borderColor = '#38bdf8';
+    } else {
+        cell.textContent = '?';
+        cell.style.color = '#64748b';
+        cell.style.borderColor = '#334155';
+    }
+}
+
+function doPush() {
+    stackData.push(currentEAX);
+    currentESP -= 4; // Стек растет вниз
+    updateUI();
+}
+
+function doPop() {
+    if (stackData.length > 0) {
+        currentEAX = stackData.pop();
+        currentESP += 4;
+    } else {
+        alert('Стек пуст!');
+    }
+    updateUI();
+}
+
+function doReset() {
+    currentESP = 0x0010FFF4;
+    currentEAX = 0x00000004;
+    stackData = [];
+    updateUI();
+}
+</script>
 </body>
 </html>

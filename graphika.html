@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Компьютерная графика — ШпораHub</title>
+    <link rel="stylesheet" href="Css-project-1.css">
+    <script>
+    window.MathJax = {
+        tex: { inlineMath: [['\\(', '\\)']] }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="icon" type="png" href="images/favicon-16x16.png">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="index.html" class="logo">🎓 Шпора<span>Hub</span></a>
+        <nav>
+            <ul>
+                <li><a href="mathanaliz.html"  class="menu-link">∫ Матанализ</a></li>
+                <li><a href="algebra.html"     class="menu-link">∑ Алгебра</a></li>
+                <li><a href="phisics.html"     class="menu-link">⚛ Физика</a></li>
+                <li><a href="html.html"        class="menu-link">🌐 Основы HTML</a></li>
+                <li><a href="programming.html" class="menu-link">💻 Программирование</a></li>
+                <li><a href="graphika.html"    class="menu-link">📐 Графика</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="Поиск формулы..." autocomplete="off">
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <nav class="breadcrumbs">
+        <a href="index.html">Главная</a>
+        <span>/</span>
+        <span>Компьютерная графика</span>
+    </nav>
+
+    <div class="section-hero">
+        <div class="card-icon icon-graph">📐</div>
+        <div>
+            <h1>Компьютерная графика</h1>
+            <p>Однородные координаты, аффинные преобразования, 3D в Scilab.</p>
+        </div>
+    </div>
+
+    <div class="section-layout">
+
+        <aside class="section-sidebar">
+            <h3>Содержание</h3>
+            <ul>
+                <li><a href="#homogeneous">Однородные координаты</a></li>
+                <li><a href="#transforms">Матрицы преобразований</a></li>
+                <li><a href="#scilab">3D моделирование в Scilab</a></li>
+                <li><a href="#pipeline">Графический конвейер</a></li>
+            </ul>
+        </aside>
+
+        <div class="section-content">
+
+            <section class="topic" id="homogeneous">
+                <h2>Однородные координаты</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Точка</div>
+                        <div class="formula-code">\((x, y, z, 1)\)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Вектор</div>
+                        <div class="formula-code">\((x, y, z, 0)\)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Зачем нужно 4-е число</div>
+                        <div class="formula-code">Позволяет одним умножением матрицы делать и поворот, и сдвиг</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="transforms">
+                <h2>Матрицы аффинных преобразований (4×4)</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Сдвиг</div>
+                        <div class="formula-code">\( T = \begin{bmatrix} 1 & 0 & 0 & dx \\ 0 & 1 & 0 & dy \\ 0 & 0 & 1 & dz \\ 0 & 0 & 0 & 1 \end{bmatrix} \)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Масштаб</div>
+                        <div class="formula-code">\( S = \begin{bmatrix} sx & 0 & 0 & 0 \\ 0 & sy & 0 & 0 \\ 0 & 0 & sz & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} \)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Поворот вокруг Z</div>
+                        <div class="formula-code">\( R_z = \begin{bmatrix} \cos\alpha & -\sin\alpha & 0 & 0 \\ \sin\alpha & \cos\alpha & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} \)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Поворот вокруг X</div>
+                        <div class="formula-code">\( R_x = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & \cos\alpha & -\sin\alpha & 0 \\ 0 & \sin\alpha & \cos\alpha & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} \)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Поворот вокруг Y</div>
+                        <div class="formula-code">\( R_y = \begin{bmatrix} \cos\alpha & 0 & \sin\alpha & 0 \\ 0 & 1 & 0 & 0 \\ -\sin\alpha & 0 & \cos\alpha & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} \)</div>
+                </div>
+            </section>
+
+            <section class="topic" id="scilab">
+                <h2>3D моделирование в Scilab</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Построение каркаса</div>
+                        <div class="formula-code">\(\text{param3d}(x, y, z)\)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Матрица вершин</div>
+                        <div class="formula-code">\( V = \begin{bmatrix} x_1 & y_1 & z_1 \\ x_2 & y_2 & z_2 \\ \dots & \dots & \dots \end{bmatrix} \)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Матрица граней</div>
+                        <div class="formula-code">\( F = \begin{bmatrix} 1 & 2 & 3 \\ 2 & 4 & 5 \\ \dots & \dots & \dots \end{bmatrix} \)</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="pipeline">
+                <h2>Графический конвейер и проекции</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Этапы конвейера</div>
+                        <div class="formula-code">\(\text{world} \to \text{view} \to \text{projection} \to \text{screen}\)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Перспективная проекция</div>
+                        <div class="formula-code">\( x' = \frac{x}{1 + \frac{z}{d}}, \quad y' = \frac{y}{1 + \frac{z}{d}} \)</div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</main>
+
+<footer>
+    &copy; 2026 ШпораHub — База шпаргалок по техническим дисциплинам.
+</footer>
+
+<script src="JS/search-index.js"></script>
+<script src="JS/search.js"></script>
+</body>
+</html>
