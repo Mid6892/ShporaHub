@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Общая физика — ШпораHub</title>
     <link rel="stylesheet" href="Css-project-1.css"></head>
+    <script>
+    window.MathJax = {
+        tex: { inlineMath: [['\\(', '\\)']] }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <body>
 
 <header>
@@ -12,7 +18,7 @@
         <a href="index.html" class="logo">🎓 Шпора<span>Hub</span></a>
         <nav>
             <ul>
-                <li><a href="mathanaliz.html"        class="menu-link">∫ Матанализ</a></li>
+                <li><a href="mathanaliz.html"  class="menu-link">∫ Матанализ</a></li>
                 <li><a href="algebra.html"     class="menu-link">∑ Алгебра</a></li>
                 <li><a href="phisics.html"     class="menu-link">⚛ Физика</a></li>
                 <li><a href="html.html"        class="menu-link">🌐 Основы HTML</a></li>
@@ -21,7 +27,7 @@
             </ul>
         </nav>
         <div class="search-box">
-            <input type="text" placeholder="Поиск формулы..." autocomplete="off">
+            <input type="text" placeholder="Поиск..." autocomplete="off">
             <div id="search-results" class="search-results"></div>
         </div>
     </div>
@@ -69,19 +75,19 @@
                 <div class="formula-list">
                     <div class="formula-card">
                         <div class="formula-name">Второй закон Ньютона</div>
-                        <div class="formula-code">F = m·a</div>
+                        <div class="formula-code">\(\vec{F} = m\vec{a}\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Кинетическая энергия</div>
-                        <div class="formula-code">E_k = m·v² / 2</div>
+                        <div class="formula-code">\(E_k = \frac{mv^2}{2}\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Потенциальная энергия</div>
-                        <div class="formula-code">E_p = m·g·h</div>
+                        <div class="formula-code">\(E_p = mgh\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Уравнение движения</div>
-                        <div class="formula-code">x = x₀ + v₀·t + a·t² / 2</div>
+                        <div class="formula-code">\(x = x_0 + v_0t + \frac{at^2}{2}\)</div>
                     </div>
                 </div>
             </section>
@@ -91,15 +97,15 @@
                 <div class="formula-list">
                     <div class="formula-card">
                         <div class="formula-name">Уравнение Менделеева–Клапейрона</div>
-                        <div class="formula-code">pV = (m/M)·R·T</div>
+                        <div class="formula-code">\(pV = \frac{m}{M}RT\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Первый закон термодинамики</div>
-                        <div class="formula-code">Q = ΔU + A</div>
+                        <div class="formula-code">\(Q = \Delta U + A\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">КПД тепловой машины</div>
-                        <div class="formula-code">η = (Q₁ − Q₂) / Q₁</div>
+                        <div class="formula-code">\(\eta = \frac{Q_1 - Q_2}{Q_1}\)</div>
                     </div>
                 </div>
             </section>
@@ -109,19 +115,19 @@
                 <div class="formula-list">
                     <div class="formula-card">
                         <div class="formula-name">Закон Ома</div>
-                        <div class="formula-code">I = U / R</div>
+                        <div class="formula-code">\(I = \frac{U}{R}\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Закон Джоуля–Ленца</div>
-                        <div class="formula-code">Q = I²·R·t</div>
+                        <div class="formula-code">\(Q = I^2Rt\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Закон Кулона</div>
-                        <div class="formula-code">F = k·|q₁·q₂| / r²</div>
+                        <div class="formula-code">\(F = k \frac{|q_1 q_2|}{r^2}\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Правила Кирхгофа</div>
-                        <div class="formula-code">ΣI = 0 (узел);  ΣIR = ΣE (контур)</div>
+                        <div class="formula-code">\(\sum I = 0 \quad \text{(узел)}; \quad \sum IR = \sum E \quad \text{(контур)}\)</div>
                     </div>
                 </div>
             </section>
@@ -131,15 +137,15 @@
                 <div class="formula-list">
                     <div class="formula-card">
                         <div class="formula-name">Сила Ампера</div>
-                        <div class="formula-code">F = B·I·L·sin α</div>
+                        <div class="formula-code">\(F = B I L \sin \alpha\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Закон Фарадея</div>
-                        <div class="formula-code">ε = −dΦ/dt</div>
+                        <div class="formula-code">\(\varepsilon = -\frac{d\Phi}{dt}\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Закон Био–Савара–Лапласа</div>
-                        <div class="formula-code">dB = (μ₀·I / 4π) · (dl × r) / r³</div>
+                        <div class="formula-code">\(dB = \frac{\mu_0 I}{4\pi} \frac{d\vec{l} \times \vec{r}}{r^3}\)</div>
                     </div>
                 </div>
             </section>
@@ -149,15 +155,15 @@
                 <div class="formula-list">
                     <div class="formula-card">
                         <div class="formula-name">Закон преломления</div>
-                        <div class="formula-code">sin α / sin β = n₂ / n₁</div>
+                        <div class="formula-code">\(\frac{\sin \alpha}{\sin \beta} = \frac{n_2}{n_1}\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Тонкая линза</div>
-                        <div class="formula-code">1/f = 1/d + 1/d'</div>
+                        <div class="formula-code">\(\frac{1}{f} = \frac{1}{d} + \frac{1}{d'}\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Условие дифракционного максимума</div>
-                        <div class="formula-code">d·sin φ = k·λ</div>
+                        <div class="formula-code">\(d \sin \varphi = k\lambda\)</div>
                     </div>
                 </div>
             </section>
