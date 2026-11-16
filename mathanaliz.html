@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Математический анализ — ШпораHub</title>
     <link rel="stylesheet" href="Css-project-1.css">
+    <script>
+    window.MathJax = {
+        tex: { inlineMath: [['\\(', '\\)']] }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
@@ -22,7 +28,7 @@
             </ul>
         </nav>
         <div class="search-box">
-            <input type="text" placeholder="Поиск формулы..." autocomplete="off">
+            <input type="text" placeholder="Поиск..." autocomplete="off">
             <div id="search-results" class="search-results"></div>
         </div>
     </div>
@@ -71,15 +77,15 @@
                 <div class="formula-list">
                     <div class="formula-card">
                         <div class="formula-name">Первый замечательный предел</div>
-                        <div class="formula-code">lim(x→0) sin(x)/x = 1</div>
+                        <div class="formula-code">\(\lim_{x \to 0} \frac{\sin x}{x} = 1\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Второй замечательный предел</div>
-                        <div class="formula-code">lim(x→∞) (1 + 1/x)^x = e</div>
+                        <div class="formula-code">\(\lim_{x \to \infty} \left(1 + \frac{1}{x}\right)^x = e\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Эквивалентности при x→0</div>
-                        <div class="formula-code">sin x ~ x,  tg x ~ x,  ln(1+x) ~ x,  e^x−1 ~ x</div>
+                        <div class="formula-code">\(\sin x \sim x, \quad \text{tg}\, x \sim x, \quad \ln(1+x) \sim x, \quad e^x - 1 \sim x\)</div>
                     </div>
                 </div>
             </section>
@@ -89,15 +95,15 @@
                 <div class="formula-list">
                     <div class="formula-card">
                         <div class="formula-name">Производная степенной</div>
-                        <div class="formula-code">(x^n)' = n·x^(n−1)</div>
+                        <div class="formula-code">\((x^n)' = n \cdot x^{n-1}\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Производная произведения</div>
-                        <div class="formula-code">(u·v)' = u'·v + u·v'</div>
+                        <div class="formula-code">\((u \cdot v)' = u'v + uv'\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Производная сложной функции</div>
-                        <div class="formula-code">[f(g(x))]' = f'(g(x))·g'(x)</div>
+                        <div class="formula-code">\([f(g(x))]' = f'(g(x)) \cdot g'(x)\)</div>
                     </div>
                 </div>
             </section>
@@ -107,15 +113,15 @@
                 <div class="formula-list">
                     <div class="formula-card">
                         <div class="formula-name">Табличный интеграл</div>
-                        <div class="formula-code">∫ x^n dx = x^(n+1)/(n+1) + C</div>
+                        <div class="formula-code">\(\int x^n \, dx = \frac{x^{n+1}}{n+1} + C\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Формула Ньютона–Лейбница</div>
-                        <div class="formula-code">∫[a..b] f(x) dx = F(b) − F(a)</div>
+                        <div class="formula-code">\(\int_{a}^{b} f(x)\,dx = F(b) - F(a)\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Интегрирование по частям</div>
-                        <div class="formula-code">∫ u dv = u·v − ∫ v du</div>
+                        <div class="formula-code">\(\int u \, dv = u \cdot v - \int v \, du\)</div>
                     </div>
                 </div>
             </section>
@@ -125,11 +131,11 @@
                 <div class="formula-list">
                     <div class="formula-card">
                         <div class="formula-name">Ряд Тейлора</div>
-                        <div class="formula-code">f(x) = Σ f⁽ⁿ⁾(a)/n! · (x−a)ⁿ</div>
+                        <div class="formula-code">\(f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!} (x-a)^n\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Ряд Маклорена для e^x</div>
-                        <div class="formula-code">e^x = Σ xⁿ/n! = 1 + x + x²/2! + …</div>
+                        <div class="formula-code">\(e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \dots\)</div>
                     </div>
                 </div>
             </section>
@@ -139,11 +145,11 @@
                 <div class="formula-list">
                     <div class="formula-card">
                         <div class="formula-name">Частная производная</div>
-                        <div class="formula-code">∂f/∂x = lim(Δx→0) [f(x+Δx, y) − f(x,y)] / Δx</div>
+                        <div class="formula-code">\(\frac{\partial f}{\partial x} = \lim_{\Delta x \to 0} \frac{f(x+\Delta x, y) - f(x,y)}{\Delta x}\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Полный дифференциал</div>
-                        <div class="formula-code">df = (∂f/∂x)dx + (∂f/∂y)dy</div>
+                        <div class="formula-code">\(df = \frac{\partial f}{\partial x}dx + \frac{\partial f}{\partial y}dy\)</div>
                     </div>
                 </div>
             </section>
