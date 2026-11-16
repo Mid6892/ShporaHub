@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Алгебра и геометрия — ШпораHub</title>
     <link rel="stylesheet" href="Css-project-1.css">
+    <script>
+    window.MathJax = {
+        tex: { inlineMath: [['\\(', '\\)']] }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
@@ -13,7 +19,7 @@
         <a href="index.html" class="logo">🎓 Шпора<span>Hub</span></a>
         <nav>
             <ul>
-                <li><a href="mathanaliz.html"        class="menu-link">∫ Матанализ</a></li>
+                <li><a href="mathanaliz.html"  class="menu-link">∫ Матанализ</a></li>
                 <li><a href="algebra.html"     class="menu-link">∑ Алгебра</a></li>
                 <li><a href="phisics.html"     class="menu-link">⚛ Физика</a></li>
                 <li><a href="html.html"        class="menu-link">🌐 Основы HTML</a></li>
@@ -22,7 +28,7 @@
             </ul>
         </nav>
         <div class="search-box">
-            <input type="text" placeholder="Поиск формулы..." autocomplete="off">
+            <input type="text" placeholder="Поиск..." autocomplete="off">
             <div id="search-results" class="search-results"></div>
         </div>
     </div>
@@ -70,15 +76,15 @@
                 <div class="formula-list">
                     <div class="formula-card">
                         <div class="formula-name">Определитель 2×2</div>
-                        <div class="formula-code">|a b; c d| = ad − bc</div>
+                        <div class="formula-code">\(\begin{vmatrix} a & b \\ c & d \end{vmatrix} = ad - bc\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Обратная матрица</div>
-                        <div class="formula-code">A⁻¹ = (1/det A) · adj(A)</div>
+                        <div class="formula-code">\(A^{-1} = \frac{1}{\det A} \cdot \text{adj}(A)\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Определитель 3×3 (правило Саррюса)</div>
-                        <div class="formula-code">det A = a11·a22·a33 + a12·a23·a31 + a13·a21·a32 − a13·a22·a31 − a11·a23·a32 − a12·a21·a33</div>
+                        <div class="formula-code-long">\(\det A = a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} - a_{13}a_{22}a_{31} - a_{11}a_{23}a_{32} - a_{12}a_{21}a_{33}\)</div>
                     </div>
                 </div>
             </section>
@@ -88,7 +94,7 @@
                 <div class="formula-list">
                     <div class="formula-card">
                         <div class="formula-name">Метод Крамера</div>
-                        <div class="formula-code">x_i = Δ_i / Δ</div>
+                        <div class="formula-code">\(x_i = \frac{\Delta_i}{\Delta}\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Метод Гаусса</div>
@@ -96,7 +102,7 @@
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Матричный способ</div>
-                        <div class="formula-code">X = A⁻¹ · B</div>
+                        <div class="formula-code">\(X = A^{-1} \cdot B\)</div>
                     </div>
                 </div>
             </section>
@@ -106,15 +112,15 @@
                 <div class="formula-list">
                     <div class="formula-card">
                         <div class="formula-name">Скалярное произведение</div>
-                        <div class="formula-code"><math><mover accent="true"><mi>a</mi><mo>&rarr;</mo></mover><mo>&middot;</mo><mover accent="true"><mi>b</mi><mo>&rarr;</mo></mover><mo>=</mo><mo>|</mo><mover accent="true"><mi>a</mi><mo>&rarr;</mo></mover><mo>|</mo><mo>|</mo><mover accent="true"><mi>b</mi><mo>&rarr;</mo></mover><mo>|</mo><mi>cos</mi><mi>&phi;</mi></math> - работа силы по перемещению</div> 
+                        <div class="formula-code-long">\(\vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos \varphi\) - работа силы по перемещению</div> 
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Векторное произведение</div>
-                        <div class="formula-code"><math><mo>|</mo><mover accent="true"><mi>a</mi><mo>&rarr;</mo></mover><mo>&times;</mo><mover accent="true"><mi>b</mi><mo>&rarr;</mo></mover><mo>|</mo><mo>=</mo><mo>|</mo><mover accent="true"><mi>a</mi><mo>&rarr;</mo></mover><mo>|</mo><mo>|</mo><mover accent="true"><mi>b</mi><mo>&rarr;</mo></mover><mo>|</mo><mi>sin</mi><mi>&phi;</mi></math> - площадь аараллелограмма</div>
+                        <div class="formula-code-long">\(|\vec{a} \times \vec{b}| = |\vec{a}||\vec{b}|\sin \varphi\) - площадь параллелограмма</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Смешанное произведение</div>
-                        <div class="formula-code"><math><mo>(</mo><mover accent="true"><mi>a</mi><mo>&rarr;</mo></mover><mo>,</mo><mover accent="true"><mi>b</mi><mo>&rarr;</mo></mover><mo>,</mo><mover accent="true"><mi>c</mi><mo>&rarr;</mo></mover><mo>)</mo><mo>=</mo><mover accent="true"><mi>a</mi><mo>&rarr;</mo></mover><mo>&middot;</mo><mo>(</mo><mover accent="true"><mi>b</mi><mo>&rarr;</mo></mover><mo>&times;</mo><mover accent="true"><mi>c</mi><mo>&rarr;</mo></mover><mo>)</mo></math> - объём параллелепипеда</div>
+                        <div class="formula-code-long">\((\vec{a}, \vec{b}, \vec{c}) = \vec{a} \cdot (\vec{b} \times \vec{c})\) - объём параллелепипеда</div>
                     </div>
                 </div>
             </section>
@@ -124,15 +130,15 @@
                 <div class="formula-list">
                     <div class="formula-card">
                         <div class="formula-name">Уравнение прямой</div>
-                        <div class="formula-code">Ax + By + C = 0</div>
+                        <div class="formula-code">\(Ax + By + C = 0\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Уравнение плоскости</div>
-                        <div class="formula-code">Ax + By + Cz + D = 0</div>
+                        <div class="formula-code">\(Ax + By + Cz + D = 0\)</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Расстояние от точки до плоскости</div>
-                        <div class="formula-code">d = |Ax₀ + By₀ + Cz₀ + D| / √(A² + B² + C²)</div>
+                        <div class="formula-code">\(d = \frac{|Ax_0 + By_0 + Cz_0 + D|}{\sqrt{A^2 + B^2 + C^2}}\)</div>
                     </div>
                 </div>
             </section>
