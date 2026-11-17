@@ -6,8 +6,14 @@
     <title>Основы программирования — ШпораHub</title>
     <link rel="stylesheet" href="Css-project-1.css">
     <link rel="icon" type="png" href="images/favicon-16x16.png">
+        <script>
+    window.MathJax = {
+        tex: { inlineMath: [['\\(', '\\)']] }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-<body>
+<body id="top">
 
 <header>
     <div class="header-container">
@@ -23,7 +29,7 @@
             </ul>
         </nav>
         <div class="search-box">
-            <input type="text" placeholder="Поиск формулы..." autocomplete="off">
+            <input type="text" placeholder="Поиск..." autocomplete="off">
             <div id="search-results" class="search-results"></div>
         </div>
     </div>
@@ -54,6 +60,8 @@
                 <li><a href="#asm">Ассемблер x86</a></li>
                 <li><a href="#algo">Алгоритмы и блок-схемы</a></li>
                 <li><a href="#data-struct">Структуры данных</a></li>
+                <li><a href="#c-memory">Память и типы C++</a></li>
+                <li><a href="#algo-complexity">Сложность алгоритмов</a></li>
             </ul>
         </aside>
 
@@ -77,6 +85,30 @@
                     <div class="formula-card">
                         <div class="formula-name">Массив</div>
                         <div class="formula-code">int a[10];</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="c-memory">
+                <h2>Память и типы C++</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Базовые типы данных</div>
+                        <div class="code-terminal">
+                            <b>int</b> — 4 байта (целые числа)<br>
+                            <b>float</b> — 4 байта (дробные)<br>
+                            <b>double</b> — 8 байт (дробные, точнее)<br>
+                            <b>char</b> — 1 байт (символы)
+                        </div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Динамическая память</div>
+                        <div class="code-terminal">
+                            <b>Выделение:</b> <span style="color:#38bdf8;">int* p = new int(10);</span><br>
+                            <b>Освобождение:</b> <span style="color:#f43f5e;">delete p;</span><br>
+                            <b>Массив:</b> <span style="color:#38bdf8;">int* arr = new int[10];</span><br>
+                            <b>Удаление массива:</b> <span style="color:#f43f5e;">delete[] arr;</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -301,6 +333,44 @@
 
             </section>
 
+            <section class="topic" id="algo">
+                <h2>Алгоритмы и блок-схемы</h2>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Начало / конец</div>
+                        <div class="formula-code">Овал</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Действие</div>
+                        <div class="formula-code">Прямоугольник</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Условие</div>
+                        <div class="formula-code">Ромб</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Ввод / вывод</div>
+                        <div class="formula-code">Параллелограмм</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="algo-complexity">
+                <h2>Сложность алгоритмов (Big O)</h2>
+                <table class="cheat-table">
+                    <thead>
+                        <tr><th>Сложность</th><th>Название</th><th>Пример</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="mono">O(1)</td><td>Константная</td><td>Доступ к элементу массива по индексу</td></tr>
+                        <tr><td class="mono">O(log n)</td><td>Логарифмическая</td><td>Бинарный поиск</td></tr>
+                        <tr><td class="mono">O(n)</td><td>Линейная</td><td>Простой перебор массива</td></tr>
+                        <tr><td class="mono">O(n log n)</td><td>Линейно-логарифмическая</td><td>Быстрая сортировка (Quick Sort)</td></tr>
+                        <tr><td class="mono">O(n²)</td><td>Квадратичная</td><td>Пузырьковая сортировка (Bubble Sort)</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
             <section class="topic" id="data-struct">
                 <h2>Структуры данных</h2>
                 <div class="formula-list">
@@ -327,6 +397,7 @@
     &copy; 2026 ШпораHub — База шпаргалок по техническим дисциплинам.
 </footer>
 
+<a href="#top" class="to-top">↑</a>
 <script src="JS/search-index.js"></script>
 <script src="JS/search.js"></script>
 <script>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Общая физика — ШпораHub</title>
-    <link rel="stylesheet" href="Css-project-1.css"></head>
+    <link rel="stylesheet" href="Css-project-1.css">
     <script>
     window.MathJax = {
         tex: { inlineMath: [['\\(', '\\)']] }
@@ -13,7 +13,7 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="icon" type="png" href="images/favicon-16x16.png">
 </head>
-<body>
+<body id="top">
 
 <header>
     <div class="header-container">
@@ -61,6 +61,7 @@
                 <li><a href="#electro">Электростатика и постоянный ток</a></li>
                 <li><a href="#magnetism">Магнетизм и электромагнетизм</a></li>
                 <li><a href="#optics">Волновая и геометрическая оптика</a></li>
+                <li><a href="#constants">Физические постоянные</a></li>
             </ul>
         </aside>
 
@@ -86,6 +87,90 @@
                         <div class="formula-code">\(x = x_0 + v_0t + \frac{at^2}{2}\)</div>
                     </div>
                 </div>
+
+                <div class="formula-list" style="margin-top: 15px;">
+                    <div class="formula-card">
+                        <div class="formula-name">Закон сохранения импульса</div>
+                        <div class="formula-code">\( m_1\vec{v}_1 + m_2\vec{v}_2 = m_1\vec{u}_1 + m_2\vec{u}_2 \)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Закон сохранения энергии</div>
+                        <div class="formula-code">\( E_{k1} + E_{p1} = E_{k2} + E_{p2} \)</div>
+                    </div>
+                </div>
+
+                <h3 style="color: #cbd5e1; margin: 30px 0 15px; font-size: 18px;">Единицы измерения (Механика)</h3>
+                    <table class="cheat-table">
+                        <thead>
+                            <tr>
+                                <th>Физическая величина</th>
+                                <th>Формула</th>
+                                <th>Единица СИ</th>
+                                <th>Обозначение</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Скорость</td>
+                                <td class="mono">\(v = \frac{S}{t}\)</td>
+                                <td>метр в секунду</td>
+                                <td class="mono">\(\frac{м}{с}\)</td>
+                            </tr>
+                            <tr>
+                                <td>Ускорение</td>
+                                <td class="mono">\(a = \frac{(v - v₀)}{t}\)</td>
+                                <td>метр на секунду в квадрате</td>
+                                <td class="mono">\(\frac{м}{с²}\)</td>
+                            </tr>
+                            <tr>
+                                <td>Сила</td>
+                                <td class="mono">F = m · a</td>
+                                <td>Ньютон</td>
+                                <td class="mono">Н</td>
+                            </tr>
+                            <tr>
+                                <td>Импульс тела</td>
+                                <td class="mono">p = m · v</td>
+                                <td>килограмм-метр в секунду</td>
+                                <td class="mono">\(кг·\frac{м}{с}\)</td>
+                            </tr>
+                            <tr>
+                                <td>Работа</td>
+                                <td class="mono">A = F · S</td>
+                                <td>Джоуль</td>
+                                <td class="mono">Дж</td>
+                            </tr>
+                            <tr>
+                                <td>Мощность</td>
+                                <td class="mono">\(P = \frac{A}{t}\)</td>
+                                <td>Ватт</td>
+                                <td class="mono">Вт</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+
+            <section class="topic" id="constants">
+                <h2>Физические постоянные</h2>
+                <table class="cheat-table">
+                    <thead>
+                        <tr>
+                            <th>Константа</th>
+                            <th>Обозначение</th>
+                            <th>Значение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Скорость света</td><td class="mono">c</td><td class="mono">3 · 10⁸ м/с</td></tr>
+                        <tr><td>Гравитационная постоянная</td><td class="mono">G</td><td class="mono">6,67 · 10⁻¹¹ Н·м²/кг²</td></tr>
+                        <tr><td>Постоянная Планка</td><td class="mono">h</td><td class="mono">6,63 · 10⁻³⁴ Дж·с</td></tr>
+                        <tr><td>Элементарный заряд</td><td class="mono">e</td><td class="mono">1,6 · 10⁻¹⁹ Кл</td></tr>
+                        <tr><td>Масса электрона</td><td class="mono">mₑ</td><td class="mono">9,1 · 10⁻³¹ кг</td></tr>
+                        <tr><td>Число Авогадро</td><td class="mono">Nₐ</td><td class="mono">6,02 · 10²³ моль⁻¹</td></tr>
+                        <tr><td>Универсальная газовая постоянная</td><td class="mono">R</td><td class="mono">8,31 Дж/(моль·К)</td></tr>
+                        <tr><td>Ускорение свободного падения</td><td class="mono">g</td><td class="mono">9,8 м/с²</td></tr>
+                    </tbody>
+                </table>
             </section>
 
             <section class="topic" id="thermo">
@@ -123,9 +208,58 @@
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Правила Кирхгофа</div>
-                        <div class="formula-code">\(\sum I = 0 \quad \text{(узел)}; \quad \sum IR = \sum E \quad \text{(контур)}\)</div>
+                        <div class="formula-code-long">\(\sum I = 0 \quad \text{(узел)}; \quad \sum IR = \sum E \quad \text{(контур)}\)</div>
                     </div>
                 </div>
+                <h3 style="color: #cbd5e1; margin: 30px 0 15px; font-size: 18px;">Единицы измерения (Электричество)</h3>
+                    <table class="cheat-table">
+                        <thead>
+                            <tr>
+                                <th>Физическая величина</th>
+                                <th>Формула</th>
+                                <th>Единица СИ</th>
+                                <th>Обозначение</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Сила тока</td>
+                                <td class="mono">I = \(\frac{q}{t}\)</td>
+                                <td>Ампер</td>
+                                <td class="mono">А</td>
+                            </tr>
+                            <tr>
+                                <td>Электрический заряд</td>
+                                <td class="mono">q = I · t</td>
+                                <td>Кулон</td>
+                                <td class="mono">Кл</td>
+                            </tr>
+                            <tr>
+                                <td>Напряжение</td>
+                                <td class="mono">\(U = \frac{A}{q}\)</td>
+                                <td>Вольт</td>
+                                <td class="mono">В</td>
+                            </tr>
+                            <tr>
+                                <td>Сопротивление</td>
+                                <td class="mono">\(R = \frac{U}{I}\)</td>
+                                <td>Ом</td>
+                                <td class="mono">Ом</td>
+                            </tr>
+                            <tr>
+                                <td>Мощность тока</td>
+                                <td class="mono">P = U · I</td>
+                                <td>Ватт</td>
+                                <td class="mono">Вт</td>
+                            </tr>
+                            <tr>
+                                <td>Электроёмкость</td>
+                                <td class="mono">\(C = \frac{q}{U}\)</td>
+                                <td>Фарад</td>
+                                <td class="mono">Ф</td>
+                            </tr>
+                        </tbody>
+                    </table>
             </section>
 
             <section class="topic" id="magnetism">
@@ -172,6 +306,7 @@
     &copy; 2026 ШпораHub — База шпаргалок по техническим дисциплинам.
 </footer>
 
+<a href="#top" class="to-top">↑</a>
 <script src="JS/search-index.js"></script>
 <script src="JS/search.js"></script>
 </body>

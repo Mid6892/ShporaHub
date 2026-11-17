@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="Css-project-1.css">
     <link rel="icon" type="png" href="images/favicon-16x16.png">
 </head>
-<body>
+<body id="top">
 
 <header>
     <div class="header-container">
@@ -118,6 +118,71 @@
                         <div class="formula-code">&lt;ol&gt;&lt;li&gt;…&lt;/li&gt;&lt;/ol&gt;</div>
                     </div>
                 </div>
+                <h3 style="color: #cbd5e1; margin: 30px 0 15px; font-size: 18px;">Шпаргалка по тегам таблиц</h3>
+                    <table class="cheat-table">
+                        <thead>
+                            <tr>
+                                <!-- Объединяем 4 столбца в один заголовок -->
+                                <th colspan="4" style="text-align: center; font-size: 16px; color: #f8fafc;">Структура таблицы в HTML</th>
+                            </tr>
+                            <tr>
+                                <th>Категория</th>
+                                <th>Тег</th>
+                                <th>Описание</th>
+                                <th>Пример использования</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Группа 1: Каркас таблицы -->
+                            <tr>
+                                <td rowspan="3" class="group-cell">Каркас</td>
+                                <td class="mono">&lt;table&gt;</td>
+                                <td>Создает саму таблицу</td>
+                                <td class="mono">&lt;table&gt;...&lt;/table&gt;</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">&lt;thead&gt;</td>
+                                <td>Группирует заголовки (шапку)</td>
+                                <td class="mono">&lt;thead&gt;...&lt;/thead&gt;</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">&lt;tbody&gt;</td>
+                                <td>Группирует основной контент (тело)</td>
+                                <td class="mono">&lt;tbody&gt;...&lt;/tbody&gt;</td>
+                            </tr>
+
+                            <!-- Группа 2: Строки и ячейки -->
+                            <tr>
+                                <td rowspan="3" class="group-cell">Строки и ячейки</td>
+                                <td class="mono">&lt;tr&gt;</td>
+                                <td>Создает строку таблицы (Table Row)</td>
+                                <td class="mono">&lt;tr&gt;...&lt;/tr&gt;</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">&lt;th&gt;</td>
+                                <td>Ячейка заголовка (жирный текст, по центру)</td>
+                                <td class="mono">&lt;th&gt;Имя&lt;/th&gt;</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">&lt;td&gt;</td>
+                                <td>Обычная ячейка с данными (Table Data)</td>
+                                <td class="mono">&lt;td&gt;Вася&lt;/td&gt;</td>
+                            </tr>
+
+                            <!-- Группа 3: Объединение -->
+                            <tr>
+                                <td rowspan="2" class="group-cell">Объединение</td>
+                                <td class="mono">colspan="2"</td>
+                                <td>Объединяет ячейки по <b>горизонтали</b> (вправо)</td>
+                                <td class="mono">&lt;td colspan="2"&gt;...&lt;/td&gt;</td>
+                            </tr>
+                            <tr>
+                                <td class="mono">rowspan="2"</td>
+                                <td>Объединяет ячейки по <b>вертикали</b> (вниз)</td>
+                                <td class="mono">&lt;td rowspan="2"&gt;...&lt;/td&gt;</td>
+                            </tr>
+                        </tbody>
+                    </table>
             </section>
 
             <section class="topic" id="maps">
@@ -162,6 +227,7 @@
     &copy; 2026 ШпораHub — База шпаргалок по техническим дисциплинам.
 </footer>
 
+<a href="#top" class="to-top">↑</a>
 <script src="JS/search-index.js"></script>
 <script src="JS/search.js"></script>
 </body>

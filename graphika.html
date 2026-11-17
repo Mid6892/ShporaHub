@@ -13,7 +13,7 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="icon" type="png" href="images/favicon-16x16.png">
 </head>
-<body>
+<body id="top">
 
 <header>
     <div class="header-container">
@@ -106,6 +106,12 @@
                         <div class="formula-name">Поворот вокруг Y</div>
                         <div class="formula-code">\( R_y = \begin{bmatrix} \cos\alpha & 0 & \sin\alpha & 0 \\ 0 & 1 & 0 & 0 \\ -\sin\alpha & 0 & \cos\alpha & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} \)</div>
                 </div>
+                <div class="formula-list" style="margin-top: 15px;">
+                    <div class="formula-card">
+                        <div class="formula-name">Поворот вокруг произвольной оси (формула Родрига)</div>
+                        <div class="formula-code">\( R = I + (\sin \theta) K + (1 - \cos \theta) K^2 \)</div>
+                    </div>
+                </div>
             </section>
 
             <section class="topic" id="scilab">
@@ -138,6 +144,12 @@
                         <div class="formula-code">\( x' = \frac{x}{1 + \frac{z}{d}}, \quad y' = \frac{y}{1 + \frac{z}{d}} \)</div>
                     </div>
                 </div>
+                <div class="formula-list" style="margin-top: 15px;">
+                    <div class="formula-card">
+                        <div class="formula-name">Матрица перспективной проекции (4×4)</div>
+                        <div class="formula-code">\( P = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 1/d & 0 \end{bmatrix} \)</div>
+                    </div>
+                </div>
             </section>
 
         </div>
@@ -148,6 +160,7 @@
     &copy; 2026 ШпораHub — База шпаргалок по техническим дисциплинам.
 </footer>
 
+<a href="#top" class="to-top">↑</a>
 <script src="JS/search-index.js"></script>
 <script src="JS/search.js"></script>
 </body>

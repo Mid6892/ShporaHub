@@ -17,8 +17,8 @@
 
     <link rel="icon" type="png" href="images/favicon-16x16.png">
 
-    <script type="text/javascript" src="JS\jquery.js"></script>
-    <script type="text/javascript" src="JS\jquery.cross-slide.js"></script>
+    <script type="text/javascript" src="JS/jquery.js"></script>
+    <script type="text/javascript" src="JS/jquery.cross-slide.js"></script>
     <script type="text/javascript">
     $(function() {
     $('#test1').crossSlide({ sleep: 2,
@@ -32,7 +32,7 @@
     });
     </script>
 </head>
-<body>
+<body id="top">
 
 <header>
     <div class="header-container">
@@ -90,6 +90,8 @@
                 <li><a href="#integrals">Интегралы</a></li>
                 <li><a href="#series">Ряды</a></li>
                 <li><a href="#multivariable">Функции нескольких переменных</a></li>
+                <li><a href="#derivatives-table">Таблица производных</a></li>
+                <li><a href="#integrals-table">Таблица интегралов</a></li>
             </ul>
         </aside>
 
@@ -131,6 +133,26 @@
                 </div>
             </section>
 
+            <section class="topic" id="derivatives-table">
+                <h2>Таблица производных</h2>
+                <table class="cheat-table">
+                    <thead>
+                        <tr><th>Функция \( f(x) \)</th><th>Производная \( f'(x) \)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="mono">\( C \) (константа)</td><td class="mono">0</td></tr>
+                        <tr><td class="mono">\( x^n \)</td><td class="mono">\( n x^{n-1} \)</td></tr>
+                        <tr><td class="mono">\( \sin x \)</td><td class="mono">\( \cos x \)</td></tr>
+                        <tr><td class="mono">\( \cos x \)</td><td class="mono">\( -\sin x \)</td></tr>
+                        <tr><td class="mono">\( \tan x \)</td><td class="mono">\( \frac{1}{\cos^2 x} \)</td></tr>
+                        <tr><td class="mono">\( e^x \)</td><td class="mono">\( e^x \)</td></tr>
+                        <tr><td class="mono">\( a^x \)</td><td class="mono">\( a^x \ln a \)</td></tr>
+                        <tr><td class="mono">\( \ln x \)</td><td class="mono">\( \frac{1}{x} \)</td></tr>
+                        <tr><td class="mono">\( \log_a x \)</td><td class="mono">\( \frac{1}{x \ln a} \)</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
             <section class="topic" id="integrals">
                 <h2>Интегралы</h2>
                 <div class="formula-list">
@@ -147,6 +169,24 @@
                         <div class="formula-code">\(\int u \, dv = u \cdot v - \int v \, du\)</div>
                     </div>
                 </div>
+            </section>
+
+            <section class="topic" id="integrals-table">
+                <h2>Таблица интегралов</h2>
+                <table class="cheat-table">
+                    <thead>
+                        <tr><th>Функция \( f(x) \)</th><th>Интеграл \( \int f(x) dx \)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="mono">\( x^n \)</td><td class="mono">\( \frac{x^{n+1}}{n+1} + C \)</td></tr>
+                        <tr><td class="mono">\( \frac{1}{x} \)</td><td class="mono">\( \ln|x| + C \)</td></tr>
+                        <tr><td class="mono">\( e^x \)</td><td class="mono">\( e^x + C \)</td></tr>
+                        <tr><td class="mono">\( \sin x \)</td><td class="mono">\( -\cos x + C \)</td></tr>
+                        <tr><td class="mono">\( \cos x \)</td><td class="mono">\( \sin x + C \)</td></tr>
+                        <tr><td class="mono">\( \frac{1}{\cos^2 x} \)</td><td class="mono">\( \tan x + C \)</td></tr>
+                        <tr><td class="mono">\( \frac{1}{\sin^2 x} \)</td><td class="mono">\( -\cot x + C \)</td></tr>
+                    </tbody>
+                </table>
             </section>
 
             <section class="topic" id="series">
@@ -185,6 +225,7 @@
     &copy; 2026 ШпораHub — База шпаргалок по техническим дисциплинам.
 </footer>
 
+<a href="#top" class="to-top">↑</a>
 <script src="JS/search-index.js"></script>
 <script src="JS/search.js"></script>
 </body>

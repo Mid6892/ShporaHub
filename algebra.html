@@ -13,7 +13,7 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="icon" type="png" href="images/favicon-16x16.png">
 </head>
-<body>
+<body id="top">
 
 <header>
     <div class="header-container">
@@ -61,6 +61,7 @@
                 <li><a href="#vectors">Векторная алгебра</a></li>
                 <li><a href="#geom">Аналитическая геометрия</a></li>
                 <li><a href="#spaces">Линейные пространства</a></li>
+                <li><a href="#conics">Кривые второго порядка</a></li>
             </ul>
         </aside>
 
@@ -79,7 +80,7 @@
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Определитель 3×3 (правило Саррюса)</div>
-                        <div class="formula-code">\(\det A = a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} - a_{13}a_{22}a_{31} - a_{11}a_{23}a_{32} - a_{12}a_{21}a_{33}\)</div>
+                        <div class="formula-code-long">\(\det A = a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} - a_{13}a_{22}a_{31} - a_{11}a_{23}a_{32} - a_{12}a_{21}a_{33}\)</div>
                     </div>
                 </div>
             </section>
@@ -111,11 +112,11 @@
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Векторное произведение</div>
-                        <div class="formula-code">\(|\vec{a} \times \vec{b}| = |\vec{a}||\vec{b}|\sin \varphi\) - площадь параллелограмма</div>
+                        <div class="formula-code-long">\(|\vec{a} \times \vec{b}| = |\vec{a}||\vec{b}|\sin \varphi\) - площадь параллелограмма</div>
                     </div>
                     <div class="formula-card">
                         <div class="formula-name">Смешанное произведение</div>
-                        <div class="formula-code">\((\vec{a}, \vec{b}, \vec{c}) = \vec{a} \cdot (\vec{b} \times \vec{c})\) - объём параллелепипеда</div>
+                        <div class="formula-code-long">\((\vec{a}, \vec{b}, \vec{c}) = \vec{a} \cdot (\vec{b} \times \vec{c})\) - объём параллелепипеда</div>
                     </div>
                 </div>
             </section>
@@ -134,6 +135,28 @@
                     <div class="formula-card">
                         <div class="formula-name">Расстояние от точки до плоскости</div>
                         <div class="formula-code">\(d = \frac{|Ax_0 + By_0 + Cz_0 + D|}{\sqrt{A^2 + B^2 + C^2}}\)</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" id="conics">
+                <h3 style="color: #cbd5e1; margin: 30px 0 15px; font-size: 18px;">Кривые второго порядка</h3>
+                <div class="formula-list">
+                    <div class="formula-card">
+                        <div class="formula-name">Эллипс</div>
+                        <div class="formula-code">\( \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 \)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Гипербола</div>
+                        <div class="formula-code">\( \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1 \)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Парабола</div>
+                        <div class="formula-code">\( y^2 = 2px \)</div>
+                    </div>
+                    <div class="formula-card">
+                        <div class="formula-name">Угол между плоскостями</div>
+                        <div class="formula-code">\( \cos \varphi = \frac{A_1 A_2 + B_1 B_2 + C_1 C_2}{\sqrt{A_1^2 + B_1^2 + C_1^2} \sqrt{A_2^2 + B_2^2 + C_2^2}} \)</div>
                     </div>
                 </div>
             </section>
@@ -160,6 +183,7 @@
     &copy; 2026 ШпораHub — База шпаргалок по техническим дисциплинам.
 </footer>
 
+<a href="#top" class="to-top">↑</a>
 <script src="JS/search-index.js"></script>
 <script src="JS/search.js"></script>
 </body>
