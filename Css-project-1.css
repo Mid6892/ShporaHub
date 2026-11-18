@@ -8,6 +8,11 @@
     padding: 0;
 }
 
+html
+{
+  scroll-behavior: smooth;
+}
+
 body
 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -929,10 +934,10 @@ footer
 
 .my-slider img
 {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important; 
-    object-position: center !important; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
 }
 
 /* Обертка */
@@ -1041,7 +1046,7 @@ footer
     /* ГЛОБАЛЬНЫЕ ФИКСЫ ДЛЯ ПРЕДОТВРАЩЕНИЯ ГОРИЗОНТАЛЬНОГО СКРОЛЛА */
     html, body
     {
-        overflow-x: clip !important; /* clip не ломает position: sticky */
+        overflow-x: clip; /* clip не ломает position: sticky */
         width: 100%;
     }
 
@@ -1065,17 +1070,16 @@ footer
 
     /* Внутренние блоки и код */
     .cheat-details summary { padding: 14px 15px; font-size: 15px; }
-    .details-content { padding: 10px !important; }
+    .details-content { padding: 10px; }
 
     .code-terminal, 
     .cheat-table, 
     .details-content, 
     .stack-box
     {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .my-slider 
@@ -1085,14 +1089,14 @@ footer
 
     .code-terminal
     {
-        overflow-x: auto !important;
-        white-space: pre-wrap !important;
-        word-break: break-all !important;
+        overflow-x: auto;
+        white-space: pre-wrap;
+        word-break: break-all;
     }
 
     .cheat-table
     {
-        overflow-x: auto !important;
+        overflow-x: auto;
         font-size: 12px;
     }
     .cheat-table th, .cheat-table td { padding: 8px 8px; }
@@ -1100,37 +1104,37 @@ footer
     /* Стек и кнопки */
     .stack-visual
     {
-        flex-direction: column !important;
-        width: 100% !important;
+        flex-direction: column;
+        width: 100%;
     }
 
     .stack-box
     {
-        min-width: 0 !important;
+        min-width: 0;
     }
 
     .stack-controls
     {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-        width: 100% !important;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
     }
 
     .stack-controls button
     {
-        flex: 1 1 30% !important;
-        min-width: 0 !important;
-        padding: 8px 4px !important;
-        font-size: 12px !important;
-        margin: 0 !important;
+        flex: 1 1 30%;
+        min-width: 0;
+        padding: 8px 4px;
+        font-size: 12px;
+        margin: 0;
     }
 
     .stack-registers
     {
-        flex-direction: column !important;
-        gap: 5px !important;
-        width: 100% !important;
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
     }
 
     .to-top
